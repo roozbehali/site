@@ -9,6 +9,7 @@ export default function Home() {
 
   return (
     <>
+      <title>Roozbeh Ali</title>
       <div className="flex justify-center items-center min-h-screen">
         <div className="flex relative w-4/5 h-[70vh] p-4 inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_at_center,black,transparent)]"></div>
         <div className="flex flex-col gap-8 p-6 absolute h-[40vh] p-4 justify-center items-center text-zinc-400">
@@ -18,8 +19,8 @@ export default function Home() {
               <span className="text-orange-200">rooz.</span> 
             </p>
             <p>i'm a {age} year old software engineer from Toronto, 🇨🇦 with a love for math and programming.</p>
-            <p>currently, i'm building <Link href="https://www.usebutler.app/">butler</Link>, taking a short break from <Link href="https://www.watonomous.ca/">watonomous</Link> and preparing for my 2A term in <Link href="https://ece.engineering/">ce @ uwaterloo</Link>. previously, I was an engineer at <Link href="https://www.beavrdesign.com/">beavr labs</Link>.</p>
-            <p>you can reach me via <a href="mailto:roozbeh.ali.2005@gmail.com">roozbeh.ali.2005[at]gmail.com</a>, or schedule a meeting with me <Link href="https://cal.com/roozbehali">here</Link>.</p>
+            <p>currently, i'm building <Link href="https://www.usebutler.app/">butler</Link>, taking a short break from <Link href="https://www.watonomous.ca/">watonomous</Link> and preparing for my 2A term in <Link href="https://ece.engineering/">ce at uwaterloo</Link>. previously, I was an engineer at <Link href="https://www.beavrdesign.com/">beavr labs</Link>.</p>
+            <p>you can reach me via <a href="mailto:roozbeh.ali.2005@gmail.com">roozbeh.ali.2005@gmail.com</a>, or schedule a meeting with me <Link href="https://cal.com/roozbehali">here</Link>.</p>
           </div>
         </div>
         <div className="flex justify-center items-center fixed bottom-6 w-full gap-8">
