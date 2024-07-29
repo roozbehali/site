@@ -24,8 +24,6 @@ export default function Home() {
       <meta property="og:type" content="website"/>
       <meta property="og:image" content="https://i.postimg.cc/2yhrg8QV/lol.png" />
       <meta property="og:url" content="https://roozbehali.me" />
-      <meta property="og:image:width" content="1232"/>
-      <meta property="og:image:height" content="800"/>
 
       <div className="flex justify-center items-center min-h-screen">
         <div className="flex relative w-4/5 h-[70vh] p-4 inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_at_center,black,transparent)]"></div>
