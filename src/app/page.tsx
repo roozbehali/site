@@ -56,8 +56,8 @@ export default function Home() {
 						</p>
 						<p>
 							currently, i'm building{" "}
-							<Link href="https://www.usebutler.app/">butler</Link> and taking a
-							short break from{" "}
+							<Link href="https://butler.ai/">butler</Link> and taking a short
+							break from{" "}
 							<Link href="https://ece.engineering/">ce at uwaterloo</Link>.
 							previously, i built autonomous vehicles at{" "}
 							<Link href="https://watonomous.ca/">watonomous</Link> and was an
@@ -66,8 +66,8 @@ export default function Home() {
 						</p>
 						<p>
 							you can reach me via{" "}
-							<a href="mailto:roozbeh@usebutler.app">roozbeh@usebutler.app</a>,
-							or schedule a meeting with me{" "}
+							<a href="mailto:rooz@butler.ai">rooz@butler.ai</a>, or schedule a
+							meeting with me{" "}
 							<Link href="https://cal.com/roozbehali">here</Link>.
 						</p>
 					</div>
