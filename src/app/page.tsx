@@ -84,10 +84,10 @@ export default function Home() {
 					<Link href="https://www.github.com/roozbehali/">
 						<FaGithub size={20} />
 					</Link>
-					<Link href="https://www.twitter.com/_roozbehali/">
+					<Link href="https://www.twitter.com/roozbehsali/">
 						<FaTwitter size={20} />
 					</Link>
-					<Link href="https://www.instagram.com/roozbeh.05/">
+					<Link href="https://www.instagram.com/roozbehsali/">
 						<FaInstagram size={20} />
 					</Link>
 				</motion.div>
