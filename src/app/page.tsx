@@ -10,7 +10,11 @@ export default function Home() {
 		new Date().getFullYear() -
 		birthday.getFullYear() -
 		(new Date() <
-		new Date(new Date().getFullYear(), birthday.getMonth(), birthday.getDate())
+		new Date(
+			new Date().getFullYear(),
+			birthday.getMonth(),
+			birthday.getDate()
+		)
 			? 1
 			: 0);
 
@@ -41,33 +45,41 @@ export default function Home() {
 			<meta property="og:url" content="https://roozbehali.me" />
 
 			<div className="flex justify-center items-center min-h-screen">
-				<div className="flex relative w-4/5 h-[70vh] p-4 inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_at_center,black,transparent)]"></div>
+				<div className="flex relative w-4/5 h-[70vh] p-4 inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_at_center,black,transparent)]" />
 				<motion.div
 					className="flex flex-col gap-8 p-6 absolute h-[40vh] p-4 justify-center items-center text-zinc-400"
 					{...fadeInUpAnimation}
 				>
 					<div className="flex flex-col gap-4 md:w-3/5 tracking-wide leading-relaxed text-zinc-400">
 						<p className="text-4xl mb-4 font-medium">
-							hey. i&apos;m <span className="text-orange-200">rooz.</span>
+							hey. i&apos;m{" "}
+							<span className="text-orange-200">rooz.</span>
 						</p>
 						<p>
-							i'm a {age} year old software engineer from Toronto, 🇨🇦 with a
-							love for math and programming.
+							i'm a {age} year old software engineer from Toronto,
+							🇨🇦 with a love for math and programming.
 						</p>
 						<p>
 							currently, i'm building{" "}
-							<Link href="https://butler.ai/">butler</Link> and taking a short
-							break from{" "}
-							<Link href="https://ece.engineering/">ce at uwaterloo</Link>.
-							previously, i built autonomous vehicles at{" "}
-							<Link href="https://watonomous.ca/">watonomous</Link> and was an
-							engineer at{" "}
-							<Link href="https://www.beavrdesign.com/">beavr design</Link>.
+							<Link href="https://butler.ai/">butler</Link> and
+							taking a short break from{" "}
+							<Link href="https://ece.engineering/">
+								ce at uwaterloo
+							</Link>
+							. previously, i built autonomous vehicles at{" "}
+							<Link href="https://watonomous.ca/">
+								watonomous
+							</Link>{" "}
+							and was an engineer at{" "}
+							<Link href="https://www.beavrdesign.com/">
+								beavr design
+							</Link>
+							.
 						</p>
 						<p>
 							you can reach me via{" "}
-							<a href="mailto:rooz@butler.ai">rooz@butler.ai</a>, or schedule a
-							meeting with me{" "}
+							<a href="mailto:rooz@butler.ai">rooz@butler.ai</a>,
+							or schedule a meeting with me{" "}
 							<Link href="https://cal.com/roozbehali">here</Link>.
 						</p>
 					</div>

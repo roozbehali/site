@@ -1,14 +1,18 @@
-import { GeistSans } from 'geist/font/sans'
-import './globals.css'
+import { GeistSans } from "geist/font/sans";
+import { Analytics } from "@vercel/analytics/react";
+import "./globals.css";
 
 export default function RootLayout({
-  children,
+	children,
 }: {
-  children: React.ReactNode
+	children: React.ReactNode;
 }) {
-  return (
-    <html lang="en" className={GeistSans.className}>
-      <body>{children}</body>
-    </html>
-  )
+	return (
+		<html lang="en" className={GeistSans.className}>
+			<body>
+				{children}
+				<Analytics />
+			</body>
+		</html>
+	);
 }
