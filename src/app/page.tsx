@@ -47,7 +47,7 @@ export default function Home() {
 					<motion.p
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
-						transition={{ duration: 0.5, delay: 0.1 }}
+						transition={{ duration: 0.75 }}
 						className="text-gray-400 text-xs"
 					>
 						{time || "00:00:00 XX"}
@@ -57,7 +57,7 @@ export default function Home() {
 				<motion.p
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
-					transition={{ duration: 0.5, delay: 0.1 }}
+					transition={{ duration: 0.75, delay: 0.1 }}
 					className="max-w-prose mb-6"
 				>
 					I'm a 19-year-old software engineer and founder based in
@@ -73,7 +73,7 @@ export default function Home() {
 				<motion.p
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
-					transition={{ duration: 0.5, delay: 0.3 }}
+					transition={{ duration: 0.75, delay: 0.2 }}
 					className="max-w-prose mb-6"
 				>
 					I love math, programming, working out and crafting tools
@@ -83,7 +83,7 @@ export default function Home() {
 				<motion.p
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
-					transition={{ duration: 0.5, delay: 0.4 }}
+					transition={{ duration: 0.75, delay: 0.3 }}
 					className="mb-6"
 				>
 					Always open to chat; reach me via{" "}
@@ -109,7 +109,7 @@ export default function Home() {
 				<motion.div
 					initial={{ opacity: 0, y: 10 }}
 					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.5, delay: 0.3 }}
+					transition={{ duration: 0.75, delay: 0.3 }}
 					className="border-t border-zinc-500"
 				>
 					<div className="flex gap-2 mt-2">
