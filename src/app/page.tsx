@@ -1,107 +1,127 @@
 "use client";
 
 import Link from "./components/Link";
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 export default function Home() {
-	const birthday = new Date("2005-05-04");
-	const age =
-		new Date().getFullYear() -
-		birthday.getFullYear() -
-		(new Date() <
-		new Date(
-			new Date().getFullYear(),
-			birthday.getMonth(),
-			birthday.getDate()
-		)
-			? 1
-			: 0);
+	const [time, setTime] = useState<string>("");
+	const [copyStatus, setCopyStatus] = useState(false);
 
-	const fadeInUpAnimation = {
-		initial: { opacity: 0, y: 20 },
-		animate: { opacity: 1, y: 0 },
-		transition: { duration: 0.75, delay: 0.5 },
+	useEffect(() => {
+		setTime(
+			new Date().toLocaleTimeString("en-US", {
+				timeZone: "America/Toronto",
+			})
+		);
+
+		const interval = setInterval(() => {
+			setTime(
+				new Date().toLocaleTimeString("en-US", {
+					timeZone: "America/Toronto",
+				})
+			);
+		}, 1000);
+
+		return () => clearInterval(interval);
+	}, []);
+
+	const copyEmail = () => {
+		navigator.clipboard.writeText("rooz@butler.ai");
+		setCopyStatus(true);
+		setTimeout(() => setCopyStatus(false), 500);
 	};
 
 	return (
 		<>
-			<title>roozbeh ali</title>
+			<title>Roozbeh Ali</title>
 			<meta
 				name="description"
-				content="a 19 year old software engineer from Toronto, with a love for math and programming. i'm currently building butler."
+				content="A software engineer from Toronto, Canada."
 			/>
 
-			<meta property="og:title" content="roozbeh ali" />
-			<meta
-				property="og:description"
-				content="a 19 year old software engineer from Toronto, with a love for math and programming. i'm currently building butler."
-			/>
-			<meta property="og:type" content="website" />
-			<meta
-				property="og:image"
-				content="https://i.postimg.cc/2yhrg8QV/lol.png"
-			/>
-			<meta property="og:url" content="https://roozbehali.me" />
+			<div className="flex flex-col py-12 px-4 sm:px-8 md:px-12 text-white w-full max-w-[600px] min-h-screen">
+				<h1 className="text-orange-200 text-xl">Roozbeh Ali</h1>
+				<div className="flex flex-col sm:flex-row sm:gap-2 mb-6">
+					<p className="text-gray-400 text-xs">Toronto, Canada</p>
+					<motion.p
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{ duration: 0.5, delay: 0.1 }}
+						className="text-gray-400 text-xs"
+					>
+						{time || "00:00:00 XX"}
+					</motion.p>
+				</div>
 
-			<div className="flex justify-center items-center min-h-screen">
-				<div className="flex relative w-4/5 h-[70vh] p-4 inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_at_center,black,transparent)]" />
-				<motion.div
-					className="flex flex-col gap-8 p-6 absolute h-[40vh] p-4 justify-center items-center text-zinc-400"
-					{...fadeInUpAnimation}
-				>
-					<div className="flex flex-col gap-4 md:w-3/5 tracking-wide leading-relaxed text-zinc-400">
-						<p className="text-4xl mb-4 font-medium">
-							hey. i&apos;m{" "}
-							<span className="text-orange-200">rooz.</span>
-						</p>
-						<p>
-							i'm a {age} year old software engineer from Toronto,
-							🇨🇦 with a love for math and programming.
-						</p>
-						<p>
-							currently, i'm building{" "}
-							<Link href="https://butler.ai/">butler</Link> and
-							taking a short break from{" "}
-							<Link href="https://ece.engineering/">
-								ce at uwaterloo
-							</Link>
-							. previously, i built autonomous vehicles at{" "}
-							<Link href="https://watonomous.ca/">
-								watonomous
-							</Link>{" "}
-							and was an engineer at{" "}
-							<Link href="https://www.beavrdesign.com/">
-								beavr design
-							</Link>
-							.
-						</p>
-						<p>
-							you can reach me via{" "}
-							<a href="mailto:rooz@butler.ai">rooz@butler.ai</a>,
-							or schedule a meeting with me{" "}
-							<Link href="https://cal.com/roozbehali">here</Link>.
-						</p>
-					</div>
-				</motion.div>
-				<motion.div
-					className="flex justify-center items-center fixed bottom-6 w-full gap-8"
+				<motion.p
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
-					transition={{ duration: 0.75, delay: 0.75 }}
+					transition={{ duration: 0.5, delay: 0.1 }}
+					className="max-w-prose mb-6"
 				>
-					<Link href="https://www.linkedin.com/in/roozbehali/">
-						<FaLinkedin size={20} />
+					I'm a 19-year-old software engineer and founder based in
+					Toronto. Currently building{" "}
+					<Link href="https://butler.ai">Butler</Link> and taking a
+					gap year from the{" "}
+					<Link href="https://ece.engineering">
+						University of Waterloo
 					</Link>
-					<Link href="https://www.github.com/roozbehali/">
-						<FaGithub size={20} />
-					</Link>
-					<Link href="https://www.twitter.com/roozbehsali/">
-						<FaTwitter size={20} />
-					</Link>
-					<Link href="https://www.instagram.com/roozbehsali/">
-						<FaInstagram size={20} />
-					</Link>
+					.
+				</motion.p>
+
+				<motion.p
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ duration: 0.5, delay: 0.3 }}
+					className="max-w-prose mb-6"
+				>
+					I love math, programming, working out and crafting tools
+					that feel good to use.
+				</motion.p>
+
+				<motion.p
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ duration: 0.5, delay: 0.4 }}
+					className="mb-6"
+				>
+					Always open to chat; reach me via{" "}
+					<button
+						type="button"
+						onClick={copyEmail}
+						className={`hover:text-orange-200 inline-flex items-center gap-1 underline ${
+							copyStatus ? "cursor-not-allowed" : "cursor-pointer"
+						}`}
+					>
+						{copyStatus ? "[copied]" : "email"}
+					</button>{" "}
+					or{" "}
+					<a
+						href="https://cal.com/roozbehali"
+						className="hover:text-orange-200 underline"
+					>
+						calendar
+					</a>
+					.
+				</motion.p>
+
+				<motion.div
+					initial={{ opacity: 0, y: 10 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.5, delay: 0.3 }}
+					className="border-t border-zinc-500"
+				>
+					<div className="flex gap-2 mt-2">
+						<Link href="https://linkedin.com/in/roozbehali">
+							LinkedIn
+						</Link>
+						<Link href="https://x.com/roozbehsali">X</Link>
+						<Link href="https://github.com/roozbehali">GitHub</Link>
+						<Link href="https://instagram.com/roozbehsali">
+							Instagram
+						</Link>
+					</div>
 				</motion.div>
 			</div>
 		</>
