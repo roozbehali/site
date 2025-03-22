@@ -12,14 +12,14 @@ export default function Home() {
 		setTime(
 			new Date().toLocaleTimeString("en-US", {
 				timeZone: "America/Toronto",
-			})
+			}),
 		);
 
 		const interval = setInterval(() => {
 			setTime(
 				new Date().toLocaleTimeString("en-US", {
 					timeZone: "America/Toronto",
-				})
+				}),
 			);
 		}, 1000);
 
@@ -60,14 +60,10 @@ export default function Home() {
 					transition={{ duration: 0.75, delay: 0.1 }}
 					className="max-w-prose mb-6"
 				>
-					I'm a 19-year-old software engineer and founder based in
-					Toronto. Currently building{" "}
-					<Link href="https://butler.ai">Butler</Link> and taking a
-					gap year from the{" "}
-					<Link href="https://ece.engineering">
-						University of Waterloo
-					</Link>
-					.
+					I'm a 19-year-old software engineer and founder based in Toronto.
+					Currently building <Link href="https://butler.ai">Butler</Link> and
+					taking a gap year from the{" "}
+					<Link href="https://ece.engineering">University of Waterloo</Link>.
 				</motion.p>
 
 				<motion.p
@@ -76,8 +72,8 @@ export default function Home() {
 					transition={{ duration: 0.75, delay: 0.2 }}
 					className="max-w-prose mb-6"
 				>
-					I love math, programming, working out and crafting tools
-					that feel good to use.
+					I love math, programming, working out and crafting tools that feel
+					good to use.
 				</motion.p>
 
 				<motion.p
@@ -113,14 +109,10 @@ export default function Home() {
 					className="border-t border-zinc-500"
 				>
 					<div className="flex gap-2 mt-2">
-						<Link href="https://linkedin.com/in/roozbehali">
-							LinkedIn
-						</Link>
+						<Link href="https://linkedin.com/in/roozbehali">LinkedIn</Link>
 						<Link href="https://x.com/roozbehsali">X</Link>
 						<Link href="https://github.com/roozbehali">GitHub</Link>
-						<Link href="https://instagram.com/roozbehsali">
-							Instagram
-						</Link>
+						<Link href="https://instagram.com/roozbehsali">Instagram</Link>
 					</div>
 				</motion.div>
 			</div>
