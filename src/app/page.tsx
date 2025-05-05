@@ -60,7 +60,7 @@ export default function Home() {
 					transition={{ duration: 0.75, delay: 0.1 }}
 					className="max-w-prose mb-6"
 				>
-					I'm a 19-year-old software engineer and founder based in Toronto.
+					I'm a 20 year old software engineer and founder based in Toronto.
 					Currently building <Link href="https://butler.ai">Butler</Link> and
 					taking a gap year from the{" "}
 					<Link href="https://ece.engineering">University of Waterloo</Link>.
