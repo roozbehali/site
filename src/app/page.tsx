@@ -88,8 +88,8 @@ export default function Home() {
 					className="max-w-prose mb-6"
 				>
 					I love math, programming, working out and crafting tools that feel
-					good to use. I'm also an avid fan of great{" "}
-					<Link href="https://www.cosmos.so/roozbehali/tech">design</Link>.
+					good to use. I'm an avid fan of great{" "}
+					<Link href="https://www.cosmos.so/roozbehali/tech">tech</Link>.
 				</motion.p>
 
 				<motion.p
