@@ -12,7 +12,7 @@ const Link: React.FC<LinkProps> = ({ href, children }) => {
 			target="_blank"
 			rel="noreferrer"
 			className="text-zinc-500 underline decoration-1 underline-offset-2 decoration-dashed 
-				hover:text-orange-200 transition-all duration-300 cursor-none
+				hover:text-orange-200 transition-all duration-300
 				relative group inline-block"
 		>
 			<span

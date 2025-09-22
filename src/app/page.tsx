@@ -60,10 +60,13 @@ export default function Home() {
 					transition={{ duration: 0.75, delay: 0.1 }}
 					className="max-w-prose mb-6"
 				>
-					I'm a 20 year old software engineer and founder based in Toronto.
-					Currently building <Link href="https://butler.ai">Butler</Link> and
-					taking a gap year from the{" "}
-					<Link href="https://ece.engineering">University of Waterloo</Link>.
+					I'm a 20 year old software engineer based in Toronto. Currently
+					working on <Link href="https://select.dev">SELECT</Link> and studying
+					Computer Engineering at the{" "}
+					<Link href="https://ece-webring.vercel.app/">
+						University of Waterloo
+					</Link>
+					.
 				</motion.p>
 
 				<motion.p
@@ -72,14 +75,27 @@ export default function Home() {
 					transition={{ duration: 0.75, delay: 0.2 }}
 					className="max-w-prose mb-6"
 				>
-					I love math, programming, working out and crafting tools that feel
-					good to use.
+					I'm also building something <Link href="/secret">secret</Link>.
+					Previously, I founded, built and raised venture capital for{" "}
+					<Link href="https://butler.ai">Butler</Link>, an all-in-one AI
+					assistant.
 				</motion.p>
 
 				<motion.p
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					transition={{ duration: 0.75, delay: 0.3 }}
+					className="max-w-prose mb-6"
+				>
+					I love math, programming, working out and crafting tools that feel
+					good to use. I'm also an avid fan of great{" "}
+					<Link href="https://www.cosmos.so/roozbehali/tech">design</Link>.
+				</motion.p>
+
+				<motion.p
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ duration: 0.75, delay: 0.4 }}
 					className="mb-6"
 				>
 					Always open to chat; reach me via{" "}
@@ -105,7 +121,7 @@ export default function Home() {
 				<motion.div
 					initial={{ opacity: 0, y: 10 }}
 					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.75, delay: 0.3 }}
+					transition={{ duration: 0.75, delay: 0.4 }}
 					className="border-t border-zinc-500"
 				>
 					<div className="flex gap-2 mt-2">
