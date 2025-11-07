@@ -27,7 +27,7 @@ export default function Home() {
 	}, []);
 
 	const copyEmail = () => {
-		navigator.clipboard.writeText("rooz@butler.ai");
+		navigator.clipboard.writeText("roozbehsali@gmail.com");
 		setCopyStatus(true);
 		setTimeout(() => setCopyStatus(false), 500);
 	};
