@@ -61,7 +61,7 @@ export default function Home() {
 					className="max-w-prose mb-6"
 				>
 					I'm a 20 year old software engineer based in Toronto. Currently
-					working on <Link href="https://select.dev">SELECT</Link> and studying
+					working at <Link href="https://select.dev">SELECT</Link> and studying
 					Computer Engineering at the{" "}
 					<Link href="https://ece-webring.vercel.app/">
 						University of Waterloo
