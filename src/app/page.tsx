@@ -77,8 +77,10 @@ export default function Home() {
 				>
 					I'm also building something <Link href="/secret">secret</Link>.
 					Previously, I founded, built and raised venture capital for{" "}
-					<Link href="https://butler.ai">Butler</Link>, an all-in-one AI
-					assistant.
+					<Link href="https://web.archive.org/web/20250423223003/https://www.butler.ai/">
+						Butler
+					</Link>
+					, an all-in-one AI assistant.
 				</motion.p>
 
 				<motion.p
