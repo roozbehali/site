@@ -2,7 +2,7 @@
 
 import Link from "./components/Link";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function Home() {
 	const [time, setTime] = useState<string>("");
@@ -26,10 +26,20 @@ export default function Home() {
 		return () => clearInterval(interval);
 	}, []);
 
+	const copyTimeoutRef = useRef<number | null>(null);
+
 	const copyEmail = () => {
 		navigator.clipboard.writeText("roozbehsali@gmail.com");
 		setCopyStatus(true);
-		setTimeout(() => setCopyStatus(false), 500);
+
+		if (copyTimeoutRef.current) {
+			window.clearTimeout(copyTimeoutRef.current);
+		}
+
+		copyTimeoutRef.current = window.setTimeout(() => {
+			setCopyStatus(false);
+			copyTimeoutRef.current = null;
+		}, 500);
 	};
 
 	return (
@@ -48,7 +58,7 @@ export default function Home() {
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						transition={{ duration: 0.75 }}
-						className="text-gray-400 text-xs"
+						className="text-gray-400 text-xs tabular-nums"
 					>
 						{time || "00:00:00 XX"}
 					</motion.p>
@@ -60,13 +70,9 @@ export default function Home() {
 					transition={{ duration: 0.75, delay: 0.1 }}
 					className="max-w-prose mb-6"
 				>
-					I'm a 20 year old software engineer based in Toronto. Currently
-					working at <Link href="https://select.dev">SELECT</Link> and studying
-					Computer Engineering at the{" "}
-					<Link href="https://ece-webring.vercel.app/">
-						University of Waterloo
-					</Link>
-					.
+					I'm a software engineer based in Toronto. Currently working at{" "}
+					<Link href="https://select.dev">SELECT</Link> and building something{" "}
+					<Link href="/secret">secret</Link>.
 				</motion.p>
 
 				<motion.p
@@ -75,12 +81,13 @@ export default function Home() {
 					transition={{ duration: 0.75, delay: 0.2 }}
 					className="max-w-prose mb-6"
 				>
-					I'm also building something <Link href="/secret">secret</Link>.
 					Previously, I founded, built and raised venture capital for{" "}
 					<Link href="https://web.archive.org/web/20250423223003/https://www.butler.ai/">
 						Butler
 					</Link>
-					, an all-in-one AI assistant.
+					, an all-in-one AI assistant. I also studied computer engineering at
+					the <Link href="https://uwaterloo.ca/">University of Waterloo</Link>{" "}
+					and did some cool work for startups.
 				</motion.p>
 
 				<motion.p
@@ -105,7 +112,7 @@ export default function Home() {
 						type="button"
 						onClick={copyEmail}
 						className={`hover:text-orange-200 inline-flex items-center gap-1 underline ${
-							copyStatus ? "cursor-not-allowed" : "cursor-pointer"
+							copyStatus && "cursor-not-allowed"
 						}`}
 					>
 						{copyStatus ? "[copied]" : "email"}
@@ -127,9 +134,9 @@ export default function Home() {
 					className="border-t border-zinc-500"
 				>
 					<div className="flex gap-2 mt-2">
+						<Link href="https://github.com/roozbehali">GitHub</Link>
 						<Link href="https://linkedin.com/in/roozbehali">LinkedIn</Link>
 						<Link href="https://x.com/roozbehsali">X</Link>
-						<Link href="https://github.com/roozbehali">GitHub</Link>
 						<Link href="https://instagram.com/roozbehsali">Instagram</Link>
 					</div>
 				</motion.div>
