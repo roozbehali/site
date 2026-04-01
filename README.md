@@ -1,1 +1,1 @@
-> a rudimentary personal website, to be updated in the future.
+> a rudimentary personal website
