@@ -72,7 +72,7 @@ export default function Home() {
 				>
 					I'm a software engineer based in Toronto. Currently working at{" "}
 					<Link href="https://select.dev">SELECT</Link> and building something{" "}
-					<Link href="/secret">secret</Link>.
+					<Link>secret</Link>.
 				</motion.p>
 
 				<motion.p
