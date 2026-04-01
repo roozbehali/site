@@ -85,9 +85,10 @@ export default function Home() {
 					<Link href="https://web.archive.org/web/20250423223003/https://www.butler.ai/">
 						Butler
 					</Link>
-					, an all-in-one AI assistant. I also studied computer engineering at
-					the <Link href="https://uwaterloo.ca/">University of Waterloo</Link>{" "}
-					and did some cool work for startups.
+					, an{"\u00A0"}all-in-one AI assistant. I also studied computer
+					engineering at the{" "}
+					<Link href="https://uwaterloo.ca/">University of Waterloo</Link> and
+					did some cool work for startups.
 				</motion.p>
 
 				<motion.p
